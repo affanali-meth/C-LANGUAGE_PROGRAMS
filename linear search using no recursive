@@ -1,0 +1,44 @@
+#include <stdio.h>
+// Function to perform linear search
+int linearSearch(int a[], int n, int key) {
+ for (int i = 0; i < n; i++) {
+ // Check if the key is present at the current index
+ if (a[i] == key)
+ return i;
+ }
+ // If the key is not present in the array
+ return -1;
+}
+// Function to display the array
+void displayArray(int a[], int n) {
+ printf("Array: ");
+ for (int i = 0; i < n; i++) {
+ printf("%d ", a[i]);
+ }
+ printf("\n");
+}
+int main() {
+ int n;
+ // Get the size of the array from the user
+ printf("Enter the size of the array: ");
+ scanf("%d", &n);
+ int a[n]; // Declare an array of size n
+ // Get array elements from the user
+ printf("Enter %d elements for the array:\n", n);
+ for (int i = 0; i < n; i++) {
+ scanf("%d", &a[i]);
+ }
+ int key;
+ // Get the key to search from the user
+ printf("Enter the key to search: ");
+ scanf("%d", &key);
+ // Display the array
+displayArray(a, n);
+ // Perform linear search
+ int result = linearSearch(a, n, key);
+ if (result == -1)
+ printf("Element %d is not present in the array.\n", key);
+ else
+ printf("Element %d is present at index %d.\n", key, result);
+ return 0;
+}
