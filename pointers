@@ -1,0 +1,18 @@
+//demonstrate the use of pointers
+#include<stdio.h>
+void main()
+{
+    int i=3;
+    int *j;
+    j=&i;
+    printf("\n the value of  i is = %d",i);
+    printf("\n the address of i is = %u",&i);
+    //printf("\n the value of j is address of i=%d",j);
+    printf("\n the valueof j is address of i =%u",j);
+    printf("\n ----------------");
+    int *k;
+    k=&j;
+    printf("\n the value of k is addres of j = %u",k);
+    printf("\n the address of j is =%u",&j);
+    //printf("\n the value of j is address of i=%p",j);
+}
