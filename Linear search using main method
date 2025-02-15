@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+ int n, key;
+// Get the size of th3e array from the user
+ printf("Enter the size of the array: ");
+ scanf("%d", &n);
+ int a[n];
+ // Get array elements from the user
+ printf("Enter the elements of the array:\n");
+ for (int i = 0; i < n; i++) {
+ scanf("%d", &a[i]);
+ }
+ // Get the key to search from the user
+ printf("Enter the element to search: ");
+ scanf("%d", &key);
+ // Linear search algorithm
+ int found = 0;
+ for (int i = 0; i < n; i++) {
+ if (a[i] == key) {
+ found = 1;
+ printf("Element %d found at index %d.\n", key, i);
+ break;
+ }
+ }
+ if (!found) {
+ printf("Element %d not found in the array.\n", key);
+ }
+ return 0;
+}
