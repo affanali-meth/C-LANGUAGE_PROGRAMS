@@ -1,0 +1,40 @@
+// Function to perform bubble sort using recursion
+void bubbleSort(int a[], int n) {
+ // Base case: if the array has only one element or is empty
+ if (n <= 1) return;
+ // Perform one pass of bubble sort
+ bubbleSortPass(a, n);
+ // Recursively call for the remaining elements
+ bubbleSort(a, n - 1);
+}
+// Function to display the array
+void displayArray(int a[], int n) {
+ printf("Array: ");
+ for (int i = 0; i < n; i++) {
+ printf("%d ", a[i]);
+ }
+ printf("\n");
+}
+int main() {
+ int n;
+ // Get the size of the array from the user
+// Function to perform bubble sort using recursion
+void bubbleSort(int a[], int n) {
+ // Base case: if the array has only one element or is empty
+ if (n <= 1) return;
+ // Perform one pass of bubble sort
+ bubbleSortPass(a, n);
+ // Recursively call for the remaining elements
+ bubbleSort(a, n - 1);
+}
+// Function to display the array
+void displayArray(int a[], int n) {
+ printf("Array: ");
+ for (int i = 0; i < n; i++) {
+ printf("%d ", a[i]);
+ }
+ printf("\n");
+}
+int main() {
+ int n;
+ // Get the size of the array from the user
