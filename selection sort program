@@ -1,0 +1,33 @@
+#include<stdio.h>
+void main()
+{
+ int n,minvalue,j,a[10];
+ printf("Enter the value of n");
+ scanf("%d",&n);
+ printf("\n Enter the elements");
+ for(int i=0;i<n;i++)
+ {
+ scanf("%d",&a[i]);
+ }
+ for(int i=0;i<n-1;i++)
+ {
+ minvalue=i;
+ for(int j=i+1;j<n;j++)
+ {
+ if(a[j]<a[minvalue])
+ {
+ minvalue=j;
+ }
+ }
+int temp=a[i];
+ a[i]=a[minvalue];
+ a[minvalue]=temp;
+}
+//print the elements of array
+printf("\n Matrix elements");
+for(int i=0;i<n;i++)
+{
+ printf("\n %d",a[i]);
+}
+
+}
