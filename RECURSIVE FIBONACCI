@@ -1,0 +1,23 @@
+#include<stdio.h>
+ #include<conio.h> 
+void fibonacci(int); 
+void main() 
+{ int k, n; 
+long int i = 0, j = 1, f; 
+printf("Enter the range of the Fibonacci series: \n");
+ scanf("%d", &n); printf("Fibonacci Series: \n"); 
+printf("%2d %2d ", i, j); 
+fibonacci(n); 
+} 
+void fibonacci(int n) 
+{ 
+static long int first = 0, second = 1, sum; 
+if(n > 0) 
+{ 
+sum = first + second; 
+first = second; 
+second = sum; 
+printf("%ld ", sum); 
+fibonacci(n-1); 
+} 
+}
