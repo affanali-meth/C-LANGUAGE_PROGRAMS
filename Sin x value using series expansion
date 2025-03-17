@@ -1,0 +1,19 @@
+#include<stdio.h> 
+#include<conio.h> 
+#include<math.h>
+ void main() 
+{ 
+float x, sum, term; int i, n; 
+printf("Enter the no of terms: \n"); 
+scanf("%d", &n); 
+printf("Enter the angle in degrees x: \n"); 
+scanf("%f", &x); 
+x = (x*3.14) / 180; 
+sum = x; 
+term = x; 
+for(i = 1;i <= n;i++) 
+{ 
+term = (term*(-1)*x*x) / ((2*i)*(2*i+1)); 
+sum+ = term; 
+}
+printf("Sin valve of given angle is %f", sum); } 
